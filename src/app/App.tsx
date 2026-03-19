@@ -7,9 +7,9 @@ import { ContactInfo } from './components/ContactInfo';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 p-8">
-      {/* Poster Container - 48" x 36" aspect ratio (4:3) */}
-      <div className="w-full max-w-[1600px] mx-auto bg-black shadow-2xl relative overflow-hidden" style={{ aspectRatio: '4/3' }}>
+    <div className="h-screen w-screen bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center p-4 overflow-hidden">
+      {/* Poster Container - 48" x 36" aspect ratio (4:3), scaled to fit viewport */}
+      <div className="bg-black shadow-2xl relative overflow-hidden" style={{ aspectRatio: '4/3', width: 'min(95vw, calc(95vh * 4 / 3))', maxWidth: '1600px' }}>
         {/* Background gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-950/40 via-purple-950/30 to-teal-950/40 pointer-events-none" />
         
